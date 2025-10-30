@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sandhiya T — Personal Portfolio</title>
+  <meta name="description" content="Sandhiya T — Computer Science & Engineering student. Portfolio & projects." />
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1522;
+      --muted:#94a3b8;
+      --accent:#7c3aed;
+      --glass: rgba(255,255,255,0.03);
+      --radius:14px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:linear-gradient(180deg,#071022 0%, #081428 100%);
+      color:#e6eef8;
+      line-height:1.5;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:24px;
+      display:flex;
+      justify-content:center;
+      font-size:16px;
+    }
+
+    .container{
+      width:100%;
+      max-width:1100px;
+    }
+
+    header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      margin-bottom:28px;
+    }
+    .brand{
+      display:flex;
+      gap:12px;
+      align-items:center;
+      text-decoration:none;
+      color:inherit;
+    }
+    .logo{
+      width:54px;height:54px;border-radius:12px;background:linear-gradient(135deg,var(--accent), #3b82f6);
+      display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;font-size:20px;
+      box-shadow:0 6px 20px rgba(0,0,0,0.6);
+    }
+    nav{display:flex;gap:12px;align-items:center}
+    nav a{
+      color:var(--muted);
+      text-decoration:none;
+      padding:8px 12px;
+      border-radius:10px;
+      transition:all .18s;
+    }
+    nav a:hover{background:var(--glass); color:#fff}
+    .cta{
+      background:linear-gradient(90deg,var(--accent), #06b6d4);
+      color:white;padding:10px 14px;border-radius:12px;text-decoration:none;font-weight:600;
+      box-shadow:0 8px 24px rgba(124,58,237,0.12);
+    }
+
+    /* hero */
+    .hero{
+      display:grid;
+      grid-template-columns:1fr 360px;
+      gap:28px;
+      align-items:center;
+      margin-bottom:32px;
+    }
+    @media (max-width:880px){
+      .hero{grid-template-columns:1fr; padding:0}
+      nav{display:none}
+      .mobile-nav{display:flex}
+    }
+    .intro h1{font-size:32px;margin:0 0 10px}
+    .intro p{color:var(--muted);margin:0 0 18px}
+    .buttons{display:flex;gap:12px;margin-top:14px}
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      padding:18px;border-radius:var(--radius);box-shadow:0 6px 30px rgba(2,6,23,0.6);
+    }
+
+    /* profile card */
+    .profile{
+      display:flex;flex-direction:column;gap:14px;align-items:center;text-align:center;
+    }
+    .photo{
+      width:180px;height:180px;border-radius:14px;background:linear-gradient(180deg,#1f2937,#111827);
+      display:flex;align-items:center;justify-content:center;font-size:44px;color:#fff;
+      overflow:hidden;
+    }
+    .small{font-size:14px;color:var(--muted)}
+
+    /* sections */
+    section{margin-bottom:22px}
+    .grid-3{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:12px;
+    }
+    @media (max-width:880px){
+      .grid-3{grid-template-columns:1fr}
+    }
+    .skill {padding:12px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01))}
+    .project{display:flex;gap:12px;align-items:flex-start}
+    .project img{width:120px;height:80px;border-radius:8px;object-fit:cover}
+
+    footer{color:var(--muted);font-size:14px;padding:20px 0;text-align:center}
+
+    /* simple badge */
+    .badge{display:inline-block;padding:6px 10px;background:rgba(255,255,255,0.03);border-radius:999px;color:var(--muted);font-weight:600}
+    /* contact form */
+    .contact-form{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    @media (max-width:880px){.contact-form{grid-template-columns:1fr}}
+    input,textarea{
+      width:100%;padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit;
+    }
+    button{padding:10px 14px;border-radius:10px;border:0;background:var(--accent);color:white;font-weight:600;cursor:pointer}
+    .muted{color:var(--muted);font-size:14px}
+    .mobile-nav{display:none}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <a class="brand" href="#">
+        <div class="logo">S</div>
+        <div>
+          <div style="font-weight:700">Sandhiya T</div>
+          <div class="small">Computer Science & Engineering — Govt. College of Engineering</div>
+        </div>
+      </a>
+
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact" class="cta">Contact / GitHub</a>
+      </nav>
+
+      <div class="mobile-nav">
+        <a class="cta" href="#contact">Contact</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="intro">
+          <div class="card">
+            <h1>Hi — I'm <span style="color:var(--accent)">Sandhiya</span></h1>
+            <p class="muted">A Computer Science & Engineering student at Government College of Engineering. I build web projects, experiment with AI tools, and love solving real-world problems.</p>
+            <div class="buttons">
+              <a class="cta" href="#projects">See projects</a>
+              <a class="badge" href="https://github.com/">GitHub</a>
+            </div>
+            <div style="margin-top:18px" class="small">Available for internships & college projects.</div>
+          </div>
+        </div>
+
+        <aside class="card profile">
+          <div class="photo">
+            <!-- Replace with real photo: <img src="your-photo.jpg" alt="Sandhiya"> -->
+            S
+          </div>
+          <div style="font-weight:700">Sandhiya T</div>
+          <div class="muted">CSE — Government College of Engineering</div>
+          <div style="width:100%;display:flex;gap:8px;justify-content:center">
+            <a class="badge" href="#">LinkedIn</a>
+            <a class="badge" href="#">Resume</a>
+          </div>
+        </aside>
+      </section>
+
+      <section id="about" class="card">
+        <h2>About</h2>
+        <p class="muted">I'm pursuing a degree in Computer Science & Engineering. My interests include web development, UI/UX, data structures & algorithms, and practical AI tools (no-code site builders, small ML prototypes). I enjoy turning ideas into working prototypes and learning new technologies.</p>
+      </section>
+
+      <section id="skills">
+        <h2>Skills</h2>
+        <div class="grid-3">
+          <div class="skill card">
+            <strong>Web</strong>
+            <div class="muted">HTML • CSS • JavaScript • Responsive design</div>
+          </div>
+          <div class="skill card">
+            <strong>Programming</strong>
+            <div class="muted">C • Python • Problem solving & DS</div>
+          </div>
+          <div class="skill card">
+            <strong>Tools</strong>
+            <div class="muted">Git • GitHub • Figma • No-code site builders</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="card">
+        <h2>Projects</h2>
+
+        <article class="project" style="margin-bottom:12px">
+          <img src="https://via.placeholder.com/300x200?text=Project+1" alt="Project thumbnail">
+          <div>
+            <strong>Portfolio Website</strong>
+            <div class="muted">A modern single-page portfolio built using HTML/CSS and responsive layout. (This template)</div>
+            <div style="margin-top:8px"><a href="#" class="badge">View code</a></div>
+          </div>
+        </article>
+
+        <article class="project" style="margin-bottom:12px">
+          <img src="https://via.placeholder.com/300x200?text=Project+2" alt="Project thumbnail">
+          <div>
+            <strong>Zero Energy Onion Storage (Concept)</strong>
+            <div class="muted">Concept and prototype for low-energy onion storage technology with bio-climatic pods incorporating bamboo & clay.</div>
+            <div style="margin-top:8px"><a href="#" class="badge">Project details</a></div>
+          </div>
+        </article>
+
+        <!-- Add more projects here -->
+      </section>
+
+      <section id="education" class="card">
+        <h2>Education</h2>
+        <div style="display:flex;gap:18px;align-items:center;flex-wrap:wrap">
+          <div>
+            <strong>Government College of Engineering</strong>
+            <div class="muted">B.E. — Computer Science & Engineering — (Year)</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="card">
+        <h2>Contact</h2>
+        <p class="muted">Want the code or help with a project? Email me at <strong>your-email@example.com</strong> or fill the form below.</p>
+
+        <form onsubmit="event.preventDefault(); alert('Thanks — form send simulated. Replace with backend or mailto.');" style="margin-top:12px">
+          <div class="contact-form">
+            <input type="text" placeholder="Your name" required />
+            <input type="email" placeholder="Email" required />
+            <textarea placeholder="Message" rows="4" style="grid-column:1 / -1"></textarea>
+            <button type="submit" style="grid-column:1 / -1">Send message</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      Crafted with ❤️ • <span class="muted">Sandhiya T — Computer Science & Engineering</span>
+    </footer>
+  </div>
+
+  <script>
+    // small smooth scroll for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        e.preventDefault();
+        const id = a.getAttribute('href').slice(1);
+        if(!id) return window.scrollTo({top:0,behavior:'smooth'});
+        const el = document.getElementById(id);
+        if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
+      })
+    })
+  </script>
+</body>
+</html>
